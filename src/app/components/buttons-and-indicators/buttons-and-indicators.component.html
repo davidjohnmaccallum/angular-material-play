@@ -1,0 +1,120 @@
+<div class="container">
+
+  <h3>Button</h3>
+
+  <div class="mb-3">
+    <button mat-button color="primary">mat-button</button>
+  </div>
+
+  <div class="mb-3">
+    <button mat-raised-button color="accent">mat-raised-button</button>
+  </div>
+
+  <div class="mb-3">
+    <button mat-flat-button color="warn">mat-flat-button</button>
+  </div>
+
+  <div class="mb-3">
+    <button mat-stroked-button>mat-stroked-button</button>
+  </div>
+
+  <div class="mb-3">
+    <button mat-icon-button>
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+
+  <div class="mb-3">
+    <p>mat-fab</p>
+    <button mat-fab>
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+
+  <div class="mb-3">
+    <p>mat-mini-fab</p>
+    <button mat-mini-fab>
+      <mat-icon>edit</mat-icon>
+    </button>
+  </div>
+
+  <h3>Button Toggle</h3>
+
+  <div class="mb-3">
+    <mat-button-toggle-group>
+      <mat-button-toggle value="One">One</mat-button-toggle>
+      <mat-button-toggle value="Two">Two</mat-button-toggle>
+      <mat-button-toggle value="Three">Three</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+
+  <div class="mb-3">
+    <mat-button-toggle-group vertical>
+      <mat-button-toggle value="One">One</mat-button-toggle>
+      <mat-button-toggle value="Two">Two</mat-button-toggle>
+      <mat-button-toggle value="Three">Three</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+
+  <h3>Badge</h3>
+
+  <div class="mb-3">
+    <button mat-button color="primary" matBadge="2">mat-button</button>
+  </div>
+
+  <div class="mb-3">
+    <button mat-button color="primary" matBadge="2" matBadgeSize="large" matBadgeColor="accent">mat-button</button>
+  </div>
+
+  <h3>Chips</h3>
+
+  <div class="mb-3">
+    <mat-chip-list>
+      <mat-chip removable (removed)="removeChip()">Dog<mat-icon matChipRemove>cancel</mat-icon>
+      </mat-chip>
+      <mat-chip disabled>Cat</mat-chip>
+      <mat-chip selected>Mouse</mat-chip>
+    </mat-chip-list>
+  </div>
+
+  <h3>Progress spinner</h3>
+
+  <div class="mb-3">
+    <div>mat-spinner</div>
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <div class="mb-3">
+    <div>mat-progress-spinner</div>
+    <mat-progress-spinner value="25" color="accent"></mat-progress-spinner>
+  </div>
+
+  <h3>Progress bar</h3>
+
+  <div class="mb-3">
+    <div>determinate</div>
+    <mat-progress-bar value="72" color="warn"></mat-progress-bar>
+  </div>
+
+  <div class="mb-3">
+    <div>indeterminate</div>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </div>
+
+  <div class="mb-3">
+    <div>buffer</div>
+    <mat-progress-bar mode="buffer" value="23" bufferValue="52"></mat-progress-bar>
+  </div>
+
+  <div class="mb-3">
+    <div>query</div>
+    <mat-progress-bar mode="query"></mat-progress-bar>
+  </div>
+
+  <h3>Ripples</h3>
+
+  <div class="mb-3">
+    <span matRipple>Click me</span>
+  </div>
+
+</div>
