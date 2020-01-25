@@ -10,6 +10,7 @@ import { MaterialModule } from './modules/material.module';
 import { ButtonsAndIndicatorsComponent } from './components/buttons-and-indicators/buttons-and-indicators.component';
 import { CssClassesComponent } from './components/css-classes/css-classes.component';
 import { FormFieldComponent } from './components/form-field/form-field.component';
+import { InputComponent } from './components/input/input.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FormFieldComponent } from './components/form-field/form-field.component
     ButtonsAndIndicatorsComponent,
     CssClassesComponent,
     FormFieldComponent,
+    InputComponent,
   ],
   imports: [
     BrowserModule,

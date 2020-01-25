@@ -3,12 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { ButtonsAndIndicatorsComponent } from './components/buttons-and-indicators/buttons-and-indicators.component';
 import { CssClassesComponent } from './components/css-classes/css-classes.component';
 import { FormFieldComponent } from './components/form-field/form-field.component';
+import { InputComponent } from './components/input/input.component';
 
 
 const routes: Routes = [
   { path: 'buttons-and-indicators', component: ButtonsAndIndicatorsComponent },
   { path: 'css-classes', component: CssClassesComponent },
   { path: 'form-field', component: FormFieldComponent },
+  { path: 'input', component: InputComponent },
   { path: '', redirectTo: '/form-field', pathMatch: 'full' },
 ];
 
