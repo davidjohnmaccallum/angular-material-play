@@ -9,14 +9,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from './modules/material.module';
 import { ButtonsAndIndicatorsComponent } from './components/buttons-and-indicators/buttons-and-indicators.component';
 import { CssClassesComponent } from './components/css-classes/css-classes.component';
-import { FormsComponent } from './components/forms/forms.component';
+import { FormFieldComponent } from './components/form-field/form-field.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ButtonsAndIndicatorsComponent,
     CssClassesComponent,
-    FormsComponent,
+    FormFieldComponent,
   ],
   imports: [
     BrowserModule,

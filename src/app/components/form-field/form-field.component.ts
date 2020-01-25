@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { FormControl, Validators, ValidationErrors, FormGroup } from '@angular/forms';
+import { FormControl, Validators, FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'app-forms',
-  templateUrl: './forms.component.html',
-  styleUrls: ['./forms.component.scss']
+  selector: 'app-form-field',
+  templateUrl: './form-field.component.html',
+  styleUrls: ['./form-field.component.scss']
 })
-export class FormsComponent {
+export class FormFieldComponent {
 
   favoriteFood = new FormControl('', [
     Validators.required
