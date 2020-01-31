@@ -12,6 +12,7 @@ import { CssClassesComponent } from './components/css-classes/css-classes.compon
 import { FormFieldComponent } from './components/form-field/form-field.component';
 import { InputComponent } from './components/input/input.component';
 import { DatepickerComponent } from './components/datepicker/datepicker.component';
+import { CheckboxComponent } from './components/checkbox/checkbox.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { DatepickerComponent } from './components/datepicker/datepicker.componen
     FormFieldComponent,
     InputComponent,
     DatepickerComponent,
+    CheckboxComponent,
   ],
   imports: [
     BrowserModule,
