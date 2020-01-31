@@ -16,6 +16,7 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { RadioButtonComponent } from './components/radio-button/radio-button.component';
 import { SelectComponent } from './components/select/select.component';
 import { SliderComponent } from './components/slider/slider.component';
+import { SlideToggleComponent } from './components/slide-toggle/slide-toggle.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { SliderComponent } from './components/slider/slider.component';
     RadioButtonComponent,
     SelectComponent,
     SliderComponent,
+    SlideToggleComponent,
   ],
   imports: [
     BrowserModule,
