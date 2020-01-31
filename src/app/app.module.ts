@@ -14,6 +14,7 @@ import { InputComponent } from './components/input/input.component';
 import { DatepickerComponent } from './components/datepicker/datepicker.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { RadioButtonComponent } from './components/radio-button/radio-button.component';
+import { SelectComponent } from './components/select/select.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { RadioButtonComponent } from './components/radio-button/radio-button.com
     DatepickerComponent,
     CheckboxComponent,
     RadioButtonComponent,
+    SelectComponent,
   ],
   imports: [
     BrowserModule,

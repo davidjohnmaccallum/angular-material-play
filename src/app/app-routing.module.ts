@@ -7,6 +7,7 @@ import { InputComponent } from './components/input/input.component';
 import { DatepickerComponent } from './components/datepicker/datepicker.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { RadioButtonComponent } from './components/radio-button/radio-button.component';
+import { SelectComponent } from './components/select/select.component';
 
 const routes: Routes = [
   { path: 'buttons-and-indicators', component: ButtonsAndIndicatorsComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'datepicker', component: DatepickerComponent },
   { path: 'checkbox', component: CheckboxComponent },
   { path: 'radio-button', component: RadioButtonComponent },
+  { path: 'select', component: SelectComponent },
   { path: '', redirectTo: '/form-field', pathMatch: 'full' },
 ];
 

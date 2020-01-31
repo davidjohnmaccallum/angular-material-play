@@ -1,0 +1,156 @@
+<mat-toolbar>Select</mat-toolbar>
+
+<div class="container">
+
+  <h4>Basic usage</h4>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Pick one</mat-label>
+    <mat-select>
+      <mat-option value="1">One</mat-option>
+      <mat-option value="2">Two</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Pick one</mat-label>
+    <select matNativeControl>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+    <mat-hint>Using native select control.</mat-hint>
+  </mat-form-field>
+
+  <h4>Getting and setting the select value</h4>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Pick one</mat-label>
+    <mat-select [(value)]="selected">
+      <mat-option value="1">One</mat-option>
+      <mat-option value="2">Two</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance='outline'>
+    <mat-label>Favorite verse</mat-label>
+    <mat-select [compareWith]="compareWith">
+      <mat-option *ngFor="let verse of verses" [value]="verse">{{verse.name}}</mat-option>
+    </mat-select>
+    <mat-hint>Custom compare function.</mat-hint>
+  </mat-form-field>
+
+  <p>Selected: {{ selected }}</p>
+
+  <h4>Setting a static placeholder</h4>
+
+  <mat-form-field appearance='outline'>
+    <mat-label>Pick one</mat-label>
+    <mat-select placeholder='Please pick one'>
+      <mat-option></mat-option>
+      <mat-option value="1">One</mat-option>
+      <mat-option value="2">Two</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <h4>Disabling the select or individual options</h4>
+
+  <mat-form-field appearance='outline'>
+    <mat-label>Pick one</mat-label>
+    <mat-select>
+      <mat-option value='1'>One</mat-option>
+      <mat-option value='2'>Two</mat-option>
+      <mat-option value='3' disabled>Three</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <h4>Resetting the select value</h4>
+
+  <mat-form-field appearance='outline'>
+    <mat-label>Pick one</mat-label>
+    <mat-select>
+      <mat-option>None</mat-option>
+      <mat-option value='1'>One</mat-option>
+      <mat-option value='2'>Two</mat-option>
+      <mat-option value='3'>Three</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <h4>Creating groups of options</h4>
+
+  <mat-form-field appearance='fill'>
+    <mat-label>Pick one</mat-label>
+    <mat-select>
+      <mat-option>None</mat-option>
+      <mat-optgroup label='One to three'>
+        <mat-option value='1'>One</mat-option>
+        <mat-option value='2'>Two</mat-option>
+        <mat-option value='3'>Three</mat-option>
+      </mat-optgroup>
+      <mat-optgroup label='Four to six'>
+        <mat-option value='4'>Four</mat-option>
+        <mat-option value='5'>Five</mat-option>
+        <mat-option value='6'>Six</mat-option>
+      </mat-optgroup>
+    </mat-select>
+  </mat-form-field>
+
+  <h4>Multiple selection</h4>
+
+  <mat-form-field>
+    <mat-label>Pick a few</mat-label>
+    <mat-select multiple (selectionChange)='multiChange($event)'>
+      <mat-option value='1'>One</mat-option>
+      <mat-option value='2'>Two</mat-option>
+      <mat-option value='3'>Three</mat-option>
+      <mat-option value='4'>Four</mat-option>
+      <mat-option value='5'>Five</mat-option>
+      <mat-option value='6'>Six</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <h4>Customizing the trigger label</h4>
+
+  <mat-form-field>
+    <mat-label>Pick a few</mat-label>
+    <mat-select multiple [formControl]="select">
+      <mat-select-trigger>
+        {{select.value ? select.value[0] : ''}}
+        <span *ngIf="select.value?.length > 1" class="small">(+1 other)</span>
+      </mat-select-trigger>
+      <mat-option value='One'>One</mat-option>
+      <mat-option value='Two'>Two</mat-option>
+      <mat-option value='Three'>Three</mat-option>
+      <mat-option value='Four'>Four</mat-option>
+      <mat-option value='Five'>Five</mat-option>
+      <mat-option value='Six'>Six</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <h4>Disabling the ripple effect</h4>
+
+  <mat-form-field>
+    <mat-label>Pick one</mat-label>
+    <mat-select disableRipple="true">
+      <mat-option value='One'>One</mat-option>
+      <mat-option value='Two'>Two</mat-option>
+      <mat-option value='Three'>Three</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <h4>Adding custom styles to the dropdown panel</h4>
+
+  <!-- Not picking up the CSS -->
+
+  <mat-form-field>
+    <mat-label>Pick one</mat-label>
+    <mat-select panelClass="my-panel">
+      <mat-option value='One'>One</mat-option>
+      <mat-option value='Two'>Two</mat-option>
+      <mat-option value='Three'>Three</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <h4>Changing when error messages are shown</h4>
+
+</div>
