@@ -1,0 +1,32 @@
+<mat-toolbar>Select</mat-toolbar>
+
+<div class="container">
+
+  <h4>Basic usage</h4>
+
+  <mat-slider></mat-slider>
+
+  <h4>Selecting a value</h4>
+
+  <mat-slider value="20" min=10 max=30 step=2></mat-slider>
+
+  <h4>Orientation</h4>
+
+  <mat-slider vertical></mat-slider>
+
+  <mat-slider invert></mat-slider>
+
+  <h4>Thumb label</h4>
+
+  <mat-slider min=0 max=5 thumbLabel></mat-slider>
+
+  <h4>Formatting the thumb label</h4>
+
+  <mat-slider thumbLabel max=10000 tickInterval=1000 [displayWith]="formatLabel" style="width:100%"></mat-slider>
+
+  <h4>Tick marks</h4>
+
+  <mat-slider max=1000 tickInterval=100 style="width:100%"></mat-slider>
+  <mat-slider max=1000 tickInterval="auto" style="width:100%"></mat-slider>
+
+</div>
