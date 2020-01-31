@@ -1,0 +1,178 @@
+<mat-toolbar>Datepicker</mat-toolbar>
+
+<div class="container">
+
+  <div class="mat-subheading-2">Connecting a datepicker to an input</div>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker1">
+    <mat-datepicker-toggle matSuffix [for]="picker1">
+      <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+    </mat-datepicker-toggle>
+    <mat-datepicker #picker1></mat-datepicker>
+  </mat-form-field>
+
+  <div class="mat-subheading-2">Setting the calendar starting view</div>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Datepicker start view</mat-label>
+    <mat-select #startViewSelect value="month">
+      <mat-option value="month" selected>month</mat-option>
+      <mat-option value="year">year</mat-option>
+      <mat-option value="multi-year">multi-year</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!--
+    Error tip: leave the [] off the for.
+  -->
+  <mat-form-field appearance="fill">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker2">
+    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+    <mat-datepicker #picker2 [startView]="startViewSelect.value"></mat-datepicker>
+  </mat-form-field>
+
+  <!--
+    Error tip: startAt must be yyyy-mm-dd or fails silently
+  -->
+  <mat-form-field appearance="fill">
+    <mat-label>When were you born?</mat-label>
+    <input matInput [matDatepicker]="picker3">
+    <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+    <mat-datepicker #picker3 startAt="1980-01-01"></mat-datepicker>
+  </mat-form-field>
+
+  <div class="mat-subheading-2">Watching the views for changes on selected years and months</div>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker4">
+    <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+    <mat-datepicker #picker4 startView="multi-year" (yearSelected)="log($event)" (monthSelected)="log($event)">
+    </mat-datepicker>
+    <mat-hint>Events are logged to the console.</mat-hint>
+  </mat-form-field>
+
+  <div class="mat-subheading-2">Setting the selected date</div>
+
+  <mat-form-field appearance="standard">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker5" [formControl]="picker5Control">
+    <mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle>
+    <mat-datepicker #picker5></mat-datepicker>
+    <mat-hint>Value set in controller</mat-hint>
+  </mat-form-field>
+
+  <div class="mat-subheading-2">Changing the datepicker colors</div>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker6">
+    <mat-datepicker-toggle matSuffix [for]="picker6"></mat-datepicker-toggle>
+    <mat-datepicker #picker6 color="accent"></mat-datepicker>
+    <mat-hint>Using accent pallet.</mat-hint>
+  </mat-form-field>
+
+  <div class="mat-subheading-2">Date validation</div>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker7" min="2020-01-01" max="2020-02-01">
+    <mat-datepicker-toggle matSuffix [for]="picker7"></mat-datepicker-toggle>
+    <mat-datepicker #picker7></mat-datepicker>
+    <mat-hint>Using min and max properties.</mat-hint>
+  </mat-form-field>
+
+  <!--
+    If you forget to update your datepicker id.
+    Error: A MatDatepicker can only be associated with a single input.
+
+    If you add matDatepickerFilter to mat-datepicker not input.
+    Error: Template parse errors: Can't bind to 'matDatepickerFilter' since it isn't a known property of 'mat-datepicker'.
+
+    Validation not working when manually typing in an invalid date??
+  -->
+  <mat-form-field appearance="outline">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker8" [matDatepickerFilter]="picker8Filter">
+    <mat-datepicker-toggle matSuffix [for]="picker8"></mat-datepicker-toggle>
+    <mat-datepicker #picker8></mat-datepicker>
+    <mat-hint>Using matDatepickerFilter.</mat-hint>
+  </mat-form-field>
+
+  <div class="mat-subheading-2">Input and change events</div>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker9" (dateInput)="log('dateInput', $event)"
+      (dateChange)="log('dateChange', $event)">
+    <mat-datepicker-toggle matSuffix [for]="picker9"></mat-datepicker-toggle>
+    <mat-datepicker #picker9></mat-datepicker>
+    <mat-hint>Events logged to the console.</mat-hint>
+  </mat-form-field>
+
+  <div class="mat-subheading-2">Disabling parts of the datepicker</div>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker10" disabled>
+    <mat-datepicker-toggle matSuffix [for]="picker10"></mat-datepicker-toggle>
+    <mat-datepicker #picker10></mat-datepicker>
+    <mat-hint>Completely disabled.</mat-hint>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker11">
+    <mat-datepicker-toggle matSuffix [for]="picker11" disabled></mat-datepicker-toggle>
+    <mat-datepicker #picker11></mat-datepicker>
+    <mat-hint>Popup disabled.</mat-hint>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker12" disabled>
+    <mat-datepicker-toggle matSuffix [for]="picker12"></mat-datepicker-toggle>
+    <mat-datepicker #picker12 disabled="false"></mat-datepicker>
+    <mat-hint>Input disabled.</mat-hint>
+  </mat-form-field>
+
+  <div class="mat-subheading-2">Touch UI mode</div>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker13">
+    <mat-datepicker-toggle matSuffix [for]="picker13"></mat-datepicker-toggle>
+    <mat-datepicker #picker13 touchUi></mat-datepicker>
+  </mat-form-field>
+
+  <div class="mat-subheading-2">Manually opening and closing the calendar</div>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker14">
+    <mat-datepicker-toggle matSuffix [for]="picker14"></mat-datepicker-toggle>
+    <mat-datepicker #picker14></mat-datepicker>
+  </mat-form-field>
+  <button mat-raised-button (click)="picker14.open()">Open</button>
+
+  <div class="mat-subheading-2">Internationalization</div>
+  <div class="mat-subheading-2">MomentDateModule formats</div>
+  <div class="mat-subheading-2">Highlighting specific dates</div>
+
+  <!-- Not working -->
+  <mat-form-field class="example-full-width">
+    <input matInput [matDatepicker]="picker15" placeholder="Choose a date">
+    <mat-datepicker-toggle matSuffix [for]="picker15"></mat-datepicker-toggle>
+    <mat-datepicker [dateClass]="dateClass" #picker15></mat-datepicker>
+  </mat-form-field>
+</div>

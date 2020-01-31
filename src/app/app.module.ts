@@ -11,6 +11,7 @@ import { ButtonsAndIndicatorsComponent } from './components/buttons-and-indicato
 import { CssClassesComponent } from './components/css-classes/css-classes.component';
 import { FormFieldComponent } from './components/form-field/form-field.component';
 import { InputComponent } from './components/input/input.component';
+import { DatepickerComponent } from './components/datepicker/datepicker.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { InputComponent } from './components/input/input.component';
     CssClassesComponent,
     FormFieldComponent,
     InputComponent,
+    DatepickerComponent,
   ],
   imports: [
     BrowserModule,

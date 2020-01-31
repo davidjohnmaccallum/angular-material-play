@@ -4,6 +4,7 @@ import { ButtonsAndIndicatorsComponent } from './components/buttons-and-indicato
 import { CssClassesComponent } from './components/css-classes/css-classes.component';
 import { FormFieldComponent } from './components/form-field/form-field.component';
 import { InputComponent } from './components/input/input.component';
+import { DatepickerComponent } from './components/datepicker/datepicker.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'css-classes', component: CssClassesComponent },
   { path: 'form-field', component: FormFieldComponent },
   { path: 'input', component: InputComponent },
+  { path: 'datepicker', component: DatepickerComponent },
   { path: '', redirectTo: '/form-field', pathMatch: 'full' },
 ];
 
