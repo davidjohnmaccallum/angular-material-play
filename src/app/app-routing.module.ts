@@ -10,6 +10,7 @@ import { RadioButtonComponent } from './components/radio-button/radio-button.com
 import { SelectComponent } from './components/select/select.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { SlideToggleComponent } from './components/slide-toggle/slide-toggle.component';
+import { AutocompleteComponent } from './components/autocomplete/autocomplete.component';
 
 const routes: Routes = [
   { path: 'buttons-and-indicators', component: ButtonsAndIndicatorsComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'select', component: SelectComponent },
   { path: 'slider', component: SliderComponent },
   { path: 'slide-toggle', component: SlideToggleComponent },
+  { path: 'autocomplete', component: AutocompleteComponent },
   { path: '', redirectTo: '/form-field', pathMatch: 'full' },
 ];
 

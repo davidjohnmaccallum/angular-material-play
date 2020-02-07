@@ -17,6 +17,7 @@ import { RadioButtonComponent } from './components/radio-button/radio-button.com
 import { SelectComponent } from './components/select/select.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { SlideToggleComponent } from './components/slide-toggle/slide-toggle.component';
+import { AutocompleteComponent } from './components/autocomplete/autocomplete.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { SlideToggleComponent } from './components/slide-toggle/slide-toggle.com
     SelectComponent,
     SliderComponent,
     SlideToggleComponent,
+    AutocompleteComponent,
   ],
   imports: [
     BrowserModule,
