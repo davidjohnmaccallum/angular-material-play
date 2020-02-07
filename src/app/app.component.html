@@ -1,29 +1,32 @@
-<mat-toolbar color="primary">
-  <button type="button" mat-icon-button (click)="drawer.toggle()">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>angular-material-play</span>
-  <span fxFlex="1 1 auto"></span>
-  <span>{{appVersion}}</span>
-</mat-toolbar>
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport="false" mode="over" opened="false">
-    <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list>
-      <a mat-list-item routerLink="/buttons-and-indicators" (click)="drawer.close()">Buttons &
-        Indicators</a>
-      <a mat-list-item routerLink="/css-classes" (click)="drawer.close()">CSS Classes</a>
-      <a mat-list-item routerLink="/form-field" (click)="drawer.close()">Form Field</a>
-      <a mat-list-item routerLink="/input" (click)="drawer.close()">Input</a>
-      <a mat-list-item routerLink="/datepicker" (click)="drawer.close()">Datepicker</a>
-      <a mat-list-item routerLink="/checkbox" (click)="drawer.close()">Checkbox</a>
-      <a mat-list-item routerLink="/radio-button" (click)="drawer.close()">Radio Button</a>
-      <a mat-list-item routerLink="/select" (click)="drawer.close()">Select</a>
-      <a mat-list-item routerLink="/slider" (click)="drawer.close()">Slider</a>
-      <a mat-list-item routerLink="/slide-toggle" (click)="drawer.close()">Slide Toggle</a>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+<div class="app-wrapper" fxLayout="column">
+  <mat-toolbar color="primary">
+    <button type="button" mat-icon-button (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>angular-material-play</span>
+    <span fxFlex="1 1 auto"></span>
+    <span>{{appVersion}}</span>
+  </mat-toolbar>
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport="false" mode="over" opened="false">
+      <mat-toolbar>Menu</mat-toolbar>
+      <mat-nav-list>
+        <a mat-list-item routerLink="/buttons-and-indicators" (click)="drawer.close()">Buttons &
+          Indicators</a>
+        <a mat-list-item routerLink="/css-classes" (click)="drawer.close()">CSS Classes</a>
+        <a mat-list-item routerLink="/form-field" (click)="drawer.close()">Form Field</a>
+        <a mat-list-item routerLink="/input" (click)="drawer.close()">Input</a>
+        <a mat-list-item routerLink="/datepicker" (click)="drawer.close()">Datepicker</a>
+        <a mat-list-item routerLink="/checkbox" (click)="drawer.close()">Checkbox</a>
+        <a mat-list-item routerLink="/radio-button" (click)="drawer.close()">Radio Button</a>
+        <a mat-list-item routerLink="/select" (click)="drawer.close()">Select</a>
+        <a mat-list-item routerLink="/slider" (click)="drawer.close()">Slider</a>
+        <a mat-list-item routerLink="/slide-toggle" (click)="drawer.close()">Slide Toggle</a>
+        <a mat-list-item routerLink="/autocomplete" (click)="drawer.close()">Autocomplete</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
