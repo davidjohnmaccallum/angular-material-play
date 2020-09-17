@@ -34,6 +34,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   ],
 ```
 
+## Theming Angular Material
+
+I really find this tricky. Here are some resources to help:
+
+* [How to change an Angular Material theme in just 5 minutes](https://medium.com/wineofbits/how-to-change-angular-material-theme-in-just-5-minutes-d8719d1f026)
+* [Material Color Chooser](https://material.io/resources/color)
+* [Angular Material typography](https://material.angular.io/guide/typography)
+
 ## Troubleshooting
 
 ### TS1086: An accessor cannot be declared in an ambient context.
